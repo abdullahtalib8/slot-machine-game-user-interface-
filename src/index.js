@@ -21,24 +21,9 @@
 
 import React from "react";
 import { createRoot } from "react-dom/client";
-import Card from "./Card";
 import "./index.css";
-import Sdata from "./Sdata";
+import App from "./App";
 
 const container = document.getElementById("root");
 const root = createRoot(container);
-root.render(
-  <>
-    <h1 className="heading_style">List of top 5 Netflix series in 2020</h1>
-    {Sdata.map((CurVal) => {
-      return (
-        <Card
-          imgsrc={CurVal.imgscr}
-          title={CurVal.title}
-          sname={CurVal.sname}
-          link={CurVal.links}
-        />
-      );
-    })}
-  </>
-);
+root.render(<App />);
